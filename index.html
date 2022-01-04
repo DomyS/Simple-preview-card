@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: hsl(217, 54%, 11%);
+        font-family: Outfit;
+      }
+      .cardWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        min-height: 100vh;
+      }
+      .card {
+        background-color: hsl(216, 50%, 16%);
+        border-radius: 20px;
+        padding: 20px;
+        width: 330px;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .mainImage {
+        width: 289px;
+        border-radius: 15px;
+      }
+      .title {
+        color: white;
+      }
+      .textWrapper {
+        padding: 20px 0px 3px 0px;
+      }
+      .subtitle {
+        font-weight: 300;
+        color: hsl(215, 51%, 70%);
+        padding: 15px 0px;
+        line-height: 25px;
+      }
+      .price {
+        color: hsl(178, 100%, 50%);
+        font-weight: 400;
+      }
+      .priceWrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 90px;
+      }
+      .days {
+        color: hsl(215, 51%, 70%);
+        font-weight: 300;
+      }
+      .daysWrapper {
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .middleSection {
+        display: flex;
+        justify-content: space-between;
+      }
+      .line {
+        background-color: hsl(215, 32%, 27%);
+        width: inherit;
+        height: 1px;
+        margin-top: 15px;
+      }
+      .avatar {
+        height: 30px;
+        width: 30px;
+        border: 1px solid white;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+      .bottomSection {
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+      }
+      .creatorWrapper {
+        display: flex;
+      }
+      .creatorName {
+        color: white;
+        font-weight: 300;
+      }
+      .creation {
+        margin-right: 5px;
+        color: hsl(215, 51%, 70%);
+        font-weight: 300;
+      }
+      .container {
+        position: relative;
+      }
+      .container:hover .overlay {
+        opacity: 1;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 99%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: rgba(0, 255, 247, 0.5);
+        border-radius: 15px;
+      }
+      .view {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cardWrapper">
+      <div class="card">
+        <div class="container">
+          <img class="mainImage" src="images/image-equilibrium.jpg" />
+          <div class="overlay">
+            <img class="view" src="images/icon-view.svg" />
+          </div>
+        </div>
+        <div class="textWrapper">
+          <h2 class="title">Equilibrium #3429</h2>
+          <h4 class="subtitle">
+            Our Equilibrium collection promotes balance and calm.
+          </h4>
+          <div class="middleSection">
+            <div class="priceWrapper">
+              <img src="images/icon-ethereum.svg" />
+              <h4 class="price">0.041 ETH</h4>
+            </div>
+            <div class="daysWrapper">
+              <img src="images/icon-clock.svg" />
+              <h4 class="days">3 days left</h4>
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="bottomSection">
+            <img class="avatar" src="images/image-avatar.png" />
+            <div class="creatorWrapper">
+              <h4 class="creation">Creation of</h4>
+              <h4 class="creatorName">Jules Wyvern</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Equilibrium #3429 Our Equilibrium collection promotes balance and calm.
+    0.041 ETH 3 days left Creation of Jules Wyvern -->
+
+    <div class="attribution">
+      <div></div>
+    </div>
+  </body>
+</html>
